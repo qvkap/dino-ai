@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  dino-ai-backend:
+    build: .
+    container_name: dino-ai-server
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=True
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=gpt-4-turbo-preview
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    networks:
+      - dino-network
+
+networks:
+  dino-network:
+    driver: bridge

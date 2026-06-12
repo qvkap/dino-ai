@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino AI Master</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦖 Dino AI Master</h1>
+            <p>AI-Powered Chrome Dino Game</p>
+        </header>
+
+        <div class="status-box">
+            <div class="status-indicator" id="statusIndicator"></div>
+            <span id="statusText">Connecting...</span>
+        </div>
+
+        <div class="modes">
+            <button class="mode-btn" id="autoPlayBtn" title="Let AI play automatically">
+                🤖 Auto Play
+            </button>
+            <button class="mode-btn" id="advisorBtn" title="Get AI advice while you play">
+                💬 Advisor
+            </button>
+            <button class="mode-btn" id="statsBtn" title="View game statistics">
+                📊 Statistics
+            </button>
+        </div>
+
+        <div class="stats-panel" id="statsPanel" style="display: none;">
+            <h3>Game Statistics</h3>
+            <div class="stat-item">
+                <span class="stat-label">Average Score:</span>
+                <span class="stat-value" id="avgScore">-</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Best Score:</span>
+                <span class="stat-value" id="bestScore">-</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Total Games:</span>
+                <span class="stat-value" id="totalGames">-</span>
+            </div>
+            <button id="clearStatsBtn" class="clear-btn">Clear Stats</button>
+        </div>
+
+        <div class="settings">
+            <label for="apiKeyInput">OpenAI API Key:</label>
+            <input type="password" id="apiKeyInput" placeholder="sk-..." />
+            <button id="saveBtn" class="save-btn">Save</button>
+        </div>
+
+        <div class="info-box">
+            <h4>💡 How to use:</h4>
+            <ul>
+                <li>1. Enter your OpenAI API Key (optional)</li>
+                <li>2. Open a new tab (Chrome Dino Game)</li>
+                <li>3. Choose your mode</li>
+                <li>4. Watch the magic happen! ✨</li>
+            </ul>
+        </div>
+
+        <footer>
+            <a href="https://github.com/qvkap/dino-ai" target="_blank">GitHub</a>
+            <span>•</span>
+            <a href="#" id="feedbackLink">Feedback</a>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
